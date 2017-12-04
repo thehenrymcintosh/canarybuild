@@ -1,0 +1,36 @@
+{
+  "name": "canarylogin",
+  "version": "1.0.0",
+  "description": "canary prototyping - login system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "1.4.1",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*"
+  },
+  "author": "Henry McIntosh",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.54",
+    "@types/es6-promise": "0.0.33"
+  },
+  "engines": {
+    "node": "6.11.2",
+    "npm": "3.10.10"
+  }
+}
