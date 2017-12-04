@@ -1,0 +1,35 @@
+{
+    "short_name": "Canary",
+    "name": "Canary: The Social Journal",
+    "icons": [
+      {
+        "src": "public/graphics/icons/canary_icon-512.svg",
+        "type": "image/svg",
+        "sizes": "512x512"
+      },
+      {
+        "src": "public/graphics/icons/canary_icon-1024.svg",
+        "type": "image/svg",
+        "sizes": "1024x1024"
+      },
+      {
+        "src": "public/graphics/icons/canary_icon-384.png",
+        "type": "image/[ng",
+        "sizes": "384x384"
+      },
+      {
+        "src": "public/graphics/icons/canary_icon-256.png",
+        "type": "image/[ng",
+        "sizes": "256x256"
+      },
+      {
+        "src": "public/graphics/icons/canary_icon-192.png",
+        "type": "image/[ng",
+        "sizes": "192x192"
+      }
+    ],
+    "display": "standalone",
+    "start_url": "/?utm_source=homescreen",
+    "background_color": "#4FC3F7",
+    "theme_color": "#4FC3F7"
+  }

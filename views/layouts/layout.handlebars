@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canary</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4FC3F7">
+    <link rel="icon" sizes="192x192" href="/graphics/icons/canary_icon-192.png">
+</head>
+<body>
+
+    <div class="main-header"> 
+        <div class="main-menu">
+        <a href="/">Dashboard</a> 
+        {{#if user}}
+            <a href="/users/logout">Logout</a>
+         {{else}}
+            <a href="/users/login">Login</a> 
+            <a href="/users/register">Register</a> 
+         {{/if}}
+         
+         </div> 
+    </div>
+    
+    {{#if success_msg}}
+        <div class="notice"> {{success_msg}} </div>
+    {{/if}}
+    {{#if error_msg}}
+        <div class="notice"> {{error_msg}} </div>
+    {{/if}}
+    {{#if error}}
+        <div class="notice"> {{error}} </div>
+    {{/if}}
+
+
+    {{{body}}}
+</body>
+
+{{!-- come back to service workers
+<script>
+    if ('serviceWorker' in navigator) {
+        console.log('CLIENT: service worker registration in progress.');
+        navigator.serviceWorker.register('/js/serviceworker.js').then(function() {
+        console.log('CLIENT: service worker registration complete.');
+    }, function() {
+        console.log('CLIENT: service worker registration failure.');
+    });
+    } else {
+        console.log('CLIENT: service worker is not supported.');
+    }
+</script> --}}
+</html>

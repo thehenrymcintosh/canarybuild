@@ -1,0 +1,1 @@
+var mongoose=require("mongoose"),articleSchema=mongoose.Schema({title:{type:String,required:!0},author:{id:String,name:String},reacts:{MB:Number,INSP:Number,DBT:Number},content:{text:String,timeStamp:{type:Date,default:Date.now},keywords:String,tags:String,primaryCategory:String,secondaryCategories:String}}),article=module.exports=mongoose.model("article",articleSchema);
