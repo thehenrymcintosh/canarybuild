@@ -6,3 +6,17 @@
 {{user.email}}
 {{user.password}}
 {{user.username}}
+
+<form method="post" action="/api/articles/add">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="title" placeholder="Title">
+    </div>
+    <div class="form-group">
+        <label>Content</label>
+        <textarea type="text-area" class="form-control" name="content"></textarea>
+
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
