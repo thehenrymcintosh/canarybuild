@@ -1,1 +1,1 @@
-function ensureAuthenticated(e,r,t){if(e.isAuthenticated())return t();e.flash("error_msg","You are not logged in"),r.redirect("/users/login")}var express=require("express"),router=express.Router();router.get("/",ensureAuthenticated,function(e,r){r.render("index")}),module.exports=router;
+var express=require("express"),router=express.Router(),Article=require("../models/articles");router.get("/",function(e,r){Article.getAllArticles(function(e,t){if(e)throw e;console.log(t),r.render("index",{articles:t})})}),module.exports=router;

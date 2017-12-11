@@ -1,0 +1,2 @@
+function ensureAuthenticated(e,r,t){if(e.isAuthenticated())return t();e.flash("error_msg","You are not logged in"),r.redirect("/users/login")}var express=require("express"),router=express.Router(),Article=require("../models/articles");router.get("/",ensureAuthenticated,function(e,r){var t={"author.id":e.user.id};console.log(e.user.id),Article.getArticles(t,function(e,t){if(e)throw e;console.log(t),r.render("dashboard",{articles:t})})}),module.exports=router;
+//# sourceMappingURL=./dashboard.js.map

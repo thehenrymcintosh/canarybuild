@@ -21,7 +21,9 @@
     "mongoose": "*",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "react": "*",
+    "react-dom": "*"
   },
   "author": "Henry McIntosh",
   "license": "ISC",

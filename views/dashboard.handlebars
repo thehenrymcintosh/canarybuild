@@ -1,0 +1,42 @@
+<h1>Welcome to your Dashboard</h1>
+
+<p>This is the dashboard</p>
+<p>Here is your profile</p>
+{{user.name}}
+{{user.email}}
+{{user.password}}
+{{user.username}}
+{{user.id}}
+
+<p>Write a new article</p>
+
+<form method="post" action="/api/articles/add">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="title" placeholder="Title">
+    </div>
+    <div class="form-group">
+        <label>Content</label>
+        <textarea type="text-area" class="form-control" name="content"></textarea>
+
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+ 
+<p>Here are your articles</p>
+
+ {{#if articles}}
+    {{#each articles}}
+        <h3>{{title}} </h3>
+        <p>{{author.name}}</p>
+        <p>{{content.timeStamp}}</p>
+        <p>{{content.text}}</p>
+
+    {{/each}}
+{{/if}}
+
+<div>
+
+</div>
+
